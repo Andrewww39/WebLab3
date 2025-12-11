@@ -103,3 +103,46 @@ img {
 .menu a:hover {
     color: #0078d7;
 }
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        
+        grid-template-rows: auto;
+        
+        grid-template-areas: 
+            "header"
+            "top"
+            "left"
+            "center"
+            "right"
+            "bottom"
+            "footer";
+
+        width: 95%;
+        margin: 10px auto;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header, .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .img_founders, .img_logo {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
